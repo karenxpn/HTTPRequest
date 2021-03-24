@@ -53,6 +53,8 @@ struct ContentView: View {
                     .background(!chat.read ? Color(UIColor(red: 83/255, green: 90/255, blue: 97/255, alpha: 1)) : Color.clear)
                 }
             }
+        }.alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Error"), message: Text (viewModel.chatListLoadingError ), dismissButton: .default(Text("OK")))
         }
     }
 }

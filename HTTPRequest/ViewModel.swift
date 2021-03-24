@@ -18,6 +18,7 @@ class ViewModel: ObservableObject {
     
     init( dataManager: ServiceProtocol = Service.shared) {
         self.dataManager = dataManager
+        getChatList()
     }
     
     func getChatList() {
